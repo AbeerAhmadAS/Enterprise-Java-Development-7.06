@@ -1,0 +1,50 @@
+.container{
+  position: static;
+  background-color: bisque;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 500px;
+}
+
+
+ .postponed {
+  background-color: rgb(136, 134, 102);
+}
+
+.list-group-item.postponed {
+  opacity: 0.6;
+}
+.list-group-item {
+  border-style: solid;
+ 
+}
+.buttons button{
+  margin-top: 10px;
+  margin-bottom: 5%;
+  background-color: bisque;
+  border: none;
+}
+
+
+.completed{
+    background-color: rgb(222, 216, 99);
+}
+.hr {
+  size: 100%;
+  color: #000;
+  font-size: 22px;
+
+}
+.input-group-append button {
+  background-color: bisque;
+  border: none;
+}
+.final button {
+  background-color: bisque;
+  border: none;
+}
+.btn-primary{
+  margin-left: 50px;
+  
+}

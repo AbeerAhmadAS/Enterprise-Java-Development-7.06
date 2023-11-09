@@ -1,0 +1,64 @@
+<main>
+  <div class="container">
+    <h1>Todo List</h1>
+    <hr class="hr" />
+
+    <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="newTodo"
+          placeholder="Add a new todo" />
+        <div class="input-group-append">
+          <button class="btn btn-primary" (click)="addTodo()">
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios/50/add--v1.png"
+              alt="add--v1"
+            />
+          </button></div>
+    </div>
+
+    <ul class="list-group">
+      <li
+        *ngFor="let todo of todos"
+        class="list-group-item"
+        [ngClass]="{ completed: todo.completed, postponed: todo.postponed }"
+      >
+        <span>{{ todo.text }}</span>
+        <div class="buttons">
+          <button class="btn btn-success" (click)="markAsComplete(todo)">
+            <img width="30" height="30" src="https://img.icons8.com/ios/50/task-completed.png" alt="task-completed"/>          </button>
+          <button class="btn btn-warning" (click)="markAsPostponed(todo)">
+            <img width="30" height="30" src="https://img.icons8.com/ios/50/plus-1day.png" alt="plus-1day"/>
+          </button>
+          <button class="btn btn-danger" (click)="delete(todo)"><img width="30" height="30" src="https://img.icons8.com/carbon-copy/100/filled-trash.png" alt="filled-trash"/></button>
+          <button (click)="editTodo(todo)"><img width="25" height="25" src="https://img.icons8.com/ios/50/edit--v1.png" alt="edit--v1"/></button>
+        </div>
+      </li>
+    </ul>
+    <div *ngIf="isEnter()">
+      <p [ngStyle]="{'color': 'black'}">""Time waits for no one. – Folklore""</p>
+    </div>
+
+    <div class="final">
+      <button class="btn btn-secondary" (click)="clean()">
+        <img
+          width="50"
+          height="50"
+          src="https://img.icons8.com/ios/50/broom.png"
+          alt="broom"
+        />
+      </button>
+      <button class="btn btn-secondary" (click)="restore()">
+        <img
+          width="50"
+          height="50"
+          src="https://img.icons8.com/fluency-systems-filled/48/settings-backup-restore.png"
+          alt="settings-backup-restore"
+        />
+      </button>
+    </div>
+  </div>
+</main>

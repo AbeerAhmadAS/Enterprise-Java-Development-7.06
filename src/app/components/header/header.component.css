@@ -1,0 +1,29 @@
+
+header > ul {
+    display: block;
+    z-index: 9999;
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(220, 152, 127);
+    list-style: none;
+    border-radius: 500px;
+
+  }
+
+
+.img{
+    width: 130px;
+    padding: 20px;
+}
+.name {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 45%;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+font-size: larger;
+
+}
